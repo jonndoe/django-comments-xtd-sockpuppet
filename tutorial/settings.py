@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django_comments',
 
     'blog',
+    'channels',
+    'sockpuppet',
 ]
 
 MIDDLEWARE = [
@@ -182,5 +184,15 @@ COMMENTS_XTD_APP_MODEL_OPTIONS = {
         'who_can_post': 'all'  # Valid values: 'all', users'
     }
 }
+
+
+### sockpuppet settings
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
+    }
+}
+# in the same folder as wsgi.py
+ASGI_APPLICATION = 'sockpuppet.routing.application'
 
 
