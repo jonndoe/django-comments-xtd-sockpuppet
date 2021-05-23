@@ -5,7 +5,7 @@
 One of good choises for managing virtual enviromens is Miniconda.
 It supports having isolated python as well as nodejs enviroments. 
 - Install miniconda on your Linux machine.
-- Create single virtual enviroment for python and nodejs in one shot: `conda create --name env38_python_nodejs python=3.8 nodejs`
+- Create conda environment from file: `conda env create -f environment.yml`
 - Activate virtual enviroment: `conda activate env38_python_nodejs`
 - Check python version: `python --version`
 - Check nodejs version: `node --version`
