@@ -16,6 +16,9 @@ Now you can install all required dependencies for the project (nodejs and python
 - `npm install`
 
 
+### README.md filling up is in progress......
+
+
 
 
 
