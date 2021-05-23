@@ -1,4 +1,4 @@
-name: env38_dj_webpack_commxtd
+name: env38_python_nodejs
 channels:
   - defaults
 dependencies:
