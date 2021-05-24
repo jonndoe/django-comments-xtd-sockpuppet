@@ -11,12 +11,10 @@ class RenderallpostsReflex(Reflex):
     def renderfrompaginator(self):
         print('renderfrompaginator method of Reflex invoked!!!')
         self.pagetogo = self.element.dataset['pagetogo']
-
         parsed_url = urlparse(self.url)
         current_view_path = '/blog/renderallposts/'
-        if parsed_url.path != '/blog/renderallposts/':
-            new_url = parsed_url.scheme + '://' + parsed_url.netloc + current_view_path + parsed_url.params + self.pagetogo + parsed_url.fragment
-            self.url = new_url
+        new_url = parsed_url.scheme + '://' + parsed_url.netloc + current_view_path + parsed_url.params + self.pagetogo + parsed_url.fragment
+        self.url = new_url
 
     def render(self):
         print('render method of Reflex invoked!!!')

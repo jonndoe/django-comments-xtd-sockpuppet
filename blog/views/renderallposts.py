@@ -11,9 +11,7 @@ class RenderallpostsView(ListView):
 
 
 
-
-
-
+'''
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         #context['posts'] = Post.objects.all()
@@ -21,30 +19,9 @@ class RenderallpostsView(ListView):
 
         if not context.get('stimulus_reflex'):
             print('NOT from reflex!!!')
-            #context['posts_from_url'] = Post.objects.all()
-            #return context
+            return context
 
         elif context.get('stimulus_reflex'):
-            print('YES from reflex!!!')
-            print('context is: ', context)
-
-            return context
-
-
-
-'''
-class RenderallpostsView(TemplateView):
-    template_name = 'renderallposts.html'
-
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(*args, **kwargs)
-        context['posts'] = Post.objects.all()
-
-        if not context.get('stimulus_reflex'):
-            print('NOT from reflex!!!')
-            context['posts_from_url'] = Post.objects.all()
-            return context
-        else:
             print('YES from reflex!!!')
             return context
 '''

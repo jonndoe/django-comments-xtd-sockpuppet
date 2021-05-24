@@ -1,0 +1,14 @@
+
+{% load static %}
+<body>
+    
+    
+    <script type="module" src="{% static 'js/rendersinglepost.js' %}"></script>
+
+    <a  href="#"
+        data-controller="rendersinglepost"
+        data-action="click->rendersinglepost#increment"
+        data-count="{{ count }}"
+    >Increment </a><span>{{ count }}</span>
+    
+</body>
