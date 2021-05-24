@@ -18,5 +18,11 @@ export default class extends Controller {
     this.stimulate('renderallpostsReflex#render')
   }
 
+  renderfrompaginator(event) {
+    console.log('renderfrompaginator')
+    event.preventDefault()
+    this.stimulate('renderallpostsReflex#renderfrompaginator')
+  }
+
 
 }

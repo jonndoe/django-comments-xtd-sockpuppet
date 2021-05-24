@@ -5,10 +5,26 @@ from blog.models import Post
 from urllib.parse import urlparse
 from django.urls import resolve
 
+
 class RenderallpostsReflex(Reflex):
-    def increment(self, step=1):
-        print('increment method of Reflex invoked!!!')
-        #self.count = int(self.element.dataset['count']) + step
+
+    def renderfrompaginator(self):
+        print('renderfrompaginator method of Reflex invoked!!!')
+        #print('dataset is:', self.element.dataset)
+        self.pagetogo = self.element.dataset['pagetogo']
+
+        parsed_url = urlparse(self.url)
+        print('parset_url.query is: ', parsed_url.query)
+        current_view_path = '/blog/renderallposts/'
+        if parsed_url.path != '/blog/renderallposts/':
+            #if parsed_url.query != '':
+                #query = '?'
+            #else:
+                #query = ''
+            new_url = parsed_url.scheme + '://' + parsed_url.netloc + current_view_path + parsed_url.params + self.pagetogo + parsed_url.fragment
+            self.url = new_url
+
+
 
     def render(self):
         print('render method of Reflex invoked!!!')
@@ -39,6 +55,9 @@ class RenderallpostsReflex(Reflex):
             #print('new_url is : ', new_url)
             self.url = new_url
             parsed_url = urlparse(self.url)
+
+
+
 
         #resolved = resolve(parsed_url.path)
         #print('resolved url is: ', resolved)

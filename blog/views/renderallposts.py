@@ -9,7 +9,11 @@ class RenderallpostsView(ListView):
     paginate_by = 3
     context_object_name = 'posts'
 
-'''
+
+
+
+
+
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         #context['posts'] = Post.objects.all()
@@ -22,8 +26,10 @@ class RenderallpostsView(ListView):
 
         elif context.get('stimulus_reflex'):
             print('YES from reflex!!!')
+            print('context is: ', context)
+
             return context
-'''
+
 
 
 '''
