@@ -4,6 +4,15 @@
 
 ##So that everywhere in the project we use websockets to communicate to the server and render any page of the application at once.
 
+Django works with REFLEXES:
+![Django works with REFLEXES](demo/reflex-overview.gif)
+
+
+
+Django works with URL:
+![Django works AS USUAL BY URL](demo/reflex-overview2.gif)
+
+
 
 ### To run this project you have to set up python and nodejs virtual enviroments.
 One of good choises for managing virtual enviromens is Miniconda.

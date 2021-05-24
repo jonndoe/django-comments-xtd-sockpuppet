@@ -15,7 +15,7 @@
        data-controller="rendersinglepost"
        data-action="click->rendersinglepost#render"
        data-pageurl="{{ object.get_absolute_url }}"
-    >{{ object.title }} by Websockets</a></h3>
+    >{{ object.title }} by Reflex</a></h3>
 
 
     <p class="date">Published {{ object.publish }}</p>
@@ -36,7 +36,7 @@
 
 <ul class="mt-5 pagination justify-content-center">
   <li class="page-item{% if not page_obj.has_previous %} disabled{% endif %}">
-    <a class="page-link" href="{{ url }}?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% endif %}">previous</a>
+    <a class="page-link" href="{{ url }}?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% endif %}">previous by url</a>
   </li>
   {% for page_number in page_range %}
   <li class="page-item{% if page_number == page_obj.number %} active{% endif %}">
@@ -44,13 +44,10 @@
   </li>
   {% endfor %}
   <li class="page-item{% if not page_obj.has_next %} disabled{% endif %}">
-    <a class="page-link" href="{{ url }}?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% endif %}">next</a>
+    <a class="page-link" href="{{ url }}?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% endif %}">next by url</a>
   </li>
 </ul>
 
-
-
-<div>Reflexes URLs</div>
 
 
 <ul class="mt-5 pagination justify-content-center">
@@ -60,7 +57,7 @@
        data-controller="renderallposts"
        data-action="click->renderallposts#renderfrompaginator"
        data-pagetogo="{{ url }}?page={% if page_obj.has_previous %}{{ page_obj.previous_page_number }}{% endif %}"
-    >previous</a>
+    >previous by reflex</a>
   </li>
   {% for page_number in page_range %}
   <li class="page-item{% if page_number == page_obj.number %} active{% endif %}">
@@ -73,7 +70,7 @@
        data-controller="renderallposts"
        data-action="click->renderallposts#renderfrompaginator"
        data-pagetogo="{{ url }}?page={% if page_obj.has_next %}{{ page_obj.next_page_number }}{% endif %}"
-    >next</a>
+    >next by reflex</a>
   </li>
 </ul>
 {% endblock %}
