@@ -4,12 +4,12 @@
 
 ##So that everywhere in the project we use websockets to communicate to the server and render any page of the application at once.
 
-Django works with REFLEXES:
+Django works with REFLEXES: NOTE, URL IS THE SAME: localhost:8000
 ![Django works with REFLEXES](demo/reflex-overview.gif)
 
 
 
-Django works with URL:
+Django works with URL:  NOTE URL IS working as usual.
 ![Django works AS USUAL BY URL](demo/reflex-overview2.gif)
 
 
