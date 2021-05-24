@@ -9,7 +9,15 @@
 <div class="row justify-content-center flex-fill">
   <div class="col-md-10">
     {% for object in posts %}
-    <h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3>
+    <h3><a href="{{ object.get_absolute_url }}">{{ object.title }} by URL</a></h3>
+
+    <h3><a href="#"
+       data-controller="rendersinglepost"
+       data-action="click->rendersinglepost#render"
+       data-pageurl="{{ object.get_absolute_url }}"
+    >{{ object.title }} by Websockets</a></h3>
+
+
     <p class="date">Published {{ object.publish }}</p>
     {{ object.body|truncatewords:30|linebreaks }}
 
